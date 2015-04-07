@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require 'pygments' 
+
+output = %x[find . ! -path . -type d | grep -v "./Pods" | xargs git clang-format --diff]
+
+expected = ["no modified files to format\n", "clang-format did not modify any files\n"]
+if expected.include? output 
+	exit 0
+else
+	puts Pygments.highlight(output, :formatter => 'terminal', :lexer => 'diff')	
+	puts "\n\n"
+	puts "Your code is not following our guidelines. Please format it before commiting.\n"
+	puts "Here's the command you should run to automatically format all the changed files:\n\n"
+	puts "find . ! -path . -type d | grep -v \"./Pods\" | xargs git clang-format -f\n"
+	exit 1
+end
