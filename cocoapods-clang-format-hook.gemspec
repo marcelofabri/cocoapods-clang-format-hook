@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = 'cocoapods-clang-format-hook'
   spec.version       = CocoapodsClangFormatHook::VERSION
   spec.authors       = ['Marcelo Fabri']
-  spec.email         = ['marcelofabrimf@gmail.com']
+  spec.email         = ['me@marcelofabri.com']
   spec.description   = %q{A short description of cocoapods-clang-format-hook.}
   spec.summary       = %q{A longer description of cocoapods-clang-format-hook.}
-  spec.homepage      = 'https://github.com/EXAMPLE/cocoapods-clang-format-hook'
+  spec.homepage      = 'https://github.com/marcelofabri/cocoapods-clang-format-hook '
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
@@ -18,7 +18,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
+  spec.add_dependency 'pygments.rb', '~> 0.6'
+  
   spec.add_development_dependency 'bundler', '~> 1.3'
   spec.add_development_dependency 'rake'
-  spec.add_dependency 'pygments.rb'
 end
