@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = CocoapodsClangFormatHook::VERSION
   spec.authors       = ['Marcelo Fabri']
   spec.email         = ['me@marcelofabri.com']
-  spec.description   = %q{A short description of cocoapods-clang-format-hook.}
-  spec.summary       = %q{A longer description of cocoapods-clang-format-hook.}
+  spec.description   = %q{Easily setup a git pre-commit hook to validate your code.}
+  spec.summary       = %q{A CocoaPods plugin to easily setup a git pre-commit hook to validate your code using clang-format.}
   spec.homepage      = 'https://github.com/marcelofabri/cocoapods-clang-format-hook '
   spec.license       = 'MIT'
 
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'pygments.rb', '~> 0.6'
-  
+
   spec.add_development_dependency 'bundler', '~> 1.3'
   spec.add_development_dependency 'rake'
 end
